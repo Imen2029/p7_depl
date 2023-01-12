@@ -1,1 +1,1 @@
-web: streamlit run --server.enableCORS false --server.port $PORT dashboard3.py
+web: streamlit run --server.enableCORS false --server.port $PORT dashboard3_git.py
