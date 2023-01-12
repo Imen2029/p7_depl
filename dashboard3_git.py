@@ -18,8 +18,8 @@ from matplotlib import pyplot as plt
 import shap
 import streamlit.components.v1 as components
 
-#API_URL='http://127.0.0.1:5000/'
-API_URL='http://0.0.0.0:$PORT/'
+API_URL='http://127.0.0.1:5000/'
+#API_URL='http://0.0.0.0:$PORT/'
 
 #load the model
 infile1=open('LGBMClassifier_f2score_is_unbalance.pkl','rb')
