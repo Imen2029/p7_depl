@@ -18,7 +18,8 @@ from matplotlib import pyplot as plt
 import shap
 import streamlit.components.v1 as components
 
-API_URL='http://127.0.0.1:5000/'
+#API_URL='http://127.0.0.1:5000/'
+API_URL=None
 #API_URL='http://0.0.0.0:$PORT/'
 
 #load the model
@@ -33,6 +34,7 @@ train_data=train.drop(['TARGET'] ,axis= 1)
 columns=train.columns
 # LOAD DATA
 @st.cache(allow_output_mutation=True)
+
 def load_data(url):
     response = requests.get(url)
     if response.status_code != 200:
