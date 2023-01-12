@@ -32,8 +32,7 @@ train=train.set_index('SK_ID_CURR')
 train_data=train.drop(['TARGET'] ,axis= 1)
 columns=train.columns
 # LOAD DATA
-#@st.cache(allow_output_mutation=True)
-@st.cache
+@st.cache(allow_output_mutation=True)
 def load_data(url):
     response = requests.get(url)
     if response.status_code != 200:
