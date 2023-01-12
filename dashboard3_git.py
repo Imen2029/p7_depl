@@ -19,7 +19,8 @@ import shap
 import streamlit.components.v1 as components
 
 #API_URL='http://127.0.0.1:5000/'
-API_URL='http://0.0.0.0:$PORT'
+#API_URL='http://0.0.0.0:$PORT'
+API_URL='http://192.168.1.19:8501'
 #load the model
 infile1=open('LGBMClassifier_f2score_is_unbalance.pkl','rb')
 model=pickle.load(infile1)
