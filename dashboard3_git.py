@@ -19,8 +19,7 @@ import shap
 import streamlit.components.v1 as components
 
 #API_URL='http://127.0.0.1:5000/'
-API_URL=None
-#API_URL='http://0.0.0.0:$PORT/'
+API_URL='https://api-dep.herokuapp.com/'
 
 #load the model
 infile1=open('LGBMClassifier_f2score_is_unbalance.pkl','rb')
@@ -34,7 +33,6 @@ train_data=train.drop(['TARGET'] ,axis= 1)
 columns=train.columns
 # LOAD DATA
 @st.cache(allow_output_mutation=True)
-
 def load_data(url):
     response = requests.get(url)
     if response.status_code != 200:
